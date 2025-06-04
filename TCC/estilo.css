@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+:root{
+    --preto-color: #000000;
+    --cinza-color: #4D555B;
+    --marinho-color: #012538;
+    --aqua-color: #1B768E;
+    --amarelo-color: #FB9833;
+    --amareloo-color:#A57A0F;
+    --branco-color:#FCEFEF;
+}
+body{
+    background-color: var(--marinho-color);
+}
+.logo{
+    height: 220px;
+}
+nav{
+    background-color: var(--aqua-color);
+    color: var(--branco-color);
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: 0%;
+    left: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    position: relative;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--branco-color);
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--amarelo-color);
+  }
+  
+  /* Submenu oculto inicialmente */
+  nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--amareloo-color);
+    min-width: 180px;
+    z-index: 999;
+    flex-direction: column;
+  }
+  
+  /* Mostra o submenu ao passar o mouse */
+  nav ul li:hover > ul {
+    display: block;
+  }
+  
+  /* Estilo dos itens do submenu */
+  nav ul li ul li a {
+    padding: 12px 20px;
+    color: var(--branco-color);
+    text-decoration: none;
+  }
+  
+  nav ul li ul li a:hover {
+    background-color: var(--amarelo-color);
+  }
