@@ -142,3 +142,37 @@ form:hover .search-btn {
   background: var(--aqua-color);
   color: var(--amarelo-color);
 }
+
+.card{
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   padding: 16px;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .card h2 {
+      margin-top: 12px;
+      margin-bottom: 8px;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 1em;
+      line-height: 1.4;
+}
