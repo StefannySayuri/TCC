@@ -28,6 +28,10 @@ body .container{
   justify-content: center;
 }
 
+.projeto h1 h3 p{
+  color: var(--branco-color);
+}
+
 .container{
   display: flex;
   gap: 100px;
