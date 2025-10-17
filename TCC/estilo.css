@@ -27,10 +27,11 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .logo {
-  height: 120px;
+  height: 200px;
 }
 
 nav {
