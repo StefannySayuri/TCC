@@ -23,6 +23,12 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.container{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .logo {
   height: 120px;
 }
