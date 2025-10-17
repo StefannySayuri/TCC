@@ -21,6 +21,8 @@ body {
   background-color: var(--marinho-color);
   padding-top: 160px; /* Evita que o nav fixo cubra o conteúdo */
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .container{
@@ -28,7 +30,6 @@ body {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1000px;
 }
 
 .logo {
