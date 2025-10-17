@@ -21,6 +21,9 @@ body {
   background-color: var(--marinho-color);
   padding-top: 160px; /* Evita que o nav fixo cubra o conteúdo */
   font-family: Arial, sans-serif;
+}
+
+body .container{
   display: flex;
   justify-content: center;
 }
