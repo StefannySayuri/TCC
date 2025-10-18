@@ -26,10 +26,12 @@ body {
   text-align: inherit;
 }
 
-h1{
-  left: 100px;
+.produto{
+  padding-left: 40px;
 }
-body .container{
+
+
+.container{
   display: flex;
 }
 
