@@ -23,19 +23,11 @@ body {
   padding-top: 160px; /* Evita que o nav fixo cubra o conteúdo */
   font-family: Arial, sans-serif;
   justify-content: center;
-}
-
-h1{
-  right: 50px;
-  justify-content: center;
+  text-align: center;
 }
 
 body .container{
   display: flex;
-}
-
-.projeto h1 h3 p{
-  color: var(--branco-color);
 }
 
 .container{
