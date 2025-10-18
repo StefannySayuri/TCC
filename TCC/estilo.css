@@ -23,7 +23,6 @@ body {
   padding-top: 160px; /* Evita que o nav fixo cubra o conteúdo */
   font-family: Arial, sans-serif;
   justify-content: center;
-  text-align: inherit;
 }
 
 .produto{
