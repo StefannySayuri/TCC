@@ -25,8 +25,9 @@ body {
   justify-content: center;
 }
 
-body .projeto{
-  display: flex;
+h1{
+  right: 50px;
+  justify-content: center;
 }
 
 body .container{
