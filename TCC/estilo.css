@@ -41,11 +41,6 @@ body {
   margin-bottom: 15px;
 }
 
-
-.container{
-  display: flex;
-}
-
 .container{
   display: flex;
   gap: 100px;
