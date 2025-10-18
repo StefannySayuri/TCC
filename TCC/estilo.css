@@ -27,7 +27,14 @@ body {
 
 .projeto{
   margin: 20px;
+}
+
+.projeto h1{
   margin-bottom: 20px;
+}
+
+.projeto h3{
+  margin-bottom: 15px;
 }
 
 
