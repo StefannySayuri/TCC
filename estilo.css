@@ -24,7 +24,7 @@ html{
 body {
   background-color: var(--marinho-color);
   color: var(--branco-color);
-  padding-top: 160px; /* Evita que o nav fixo cubra o conteúdo */
+  padding-top: 160px;
   font-family: Arial, sans-serif;
   justify-content: center;
 }
@@ -200,4 +200,35 @@ form:hover .search-btn {
       color: #666;
       font-size: 1em;
       line-height: 1.4;
+}
+
+/* === NOVO — layout imagem + texto === */
+
+.visound-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.visound-img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.visound-texto {
+  max-width: 600px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .visound-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .visound-texto {
+    text-align: center;
+  }
 }
