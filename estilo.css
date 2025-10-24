@@ -1,8 +1,8 @@
-/* ==== Reset e tipografia ==== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,10 +11,10 @@ html {
 
 body {
   margin: 0;
-  background: #012538;
-  color: #FCEFEF;
+  background: var(--marinho);
+  color: var(--branco);
   font-family: Arial, sans-serif;
-  padding-top: 150px;
+  padding-top: 160px;
   line-height: 1.5;
   font-size: 1.1rem
 }
@@ -47,124 +47,120 @@ p {
 }
 
 /* ==== NAV ==== */
-.main-nav {
+nav {
+  background-color: var(--aqua);
+  color: var(--branco);
+  width: 100%;
+  height: 150px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background: var(--aqua);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
-  z-index: 999
-}
-
-.nav-inner {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px
+  z-index: 1000;
 }
 
-.logo {
-  height: 80px;
-  border-radius: 6px
-}
-
-.menu {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 10px;
-  padding: 0;
-  margin: 0
 }
 
-.menu li {
-  position: relative
+nav ul li {
+  position: relative;
 }
 
-.submenu-btn {
-  background: none;
-  border: none;
-  color: var(--branco);
-  padding: 8px 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer
-}
-
-.submenu-btn:hover {
-  background: rgba(0, 0, 0, .15)
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 110%;
-  background: var(--amareloo);
-  padding: 6px 0;
-  min-width: 160px;
-  border-radius: 6px
-}
-
-.has-sub.open .submenu {
-  display: block
-}
-
-.submenu a {
+nav ul li a {
   display: block;
-  color: var(--branco);
+  padding: 15px 20px;
+  color: var(--branco-color);
   text-decoration: none;
-  padding: 8px 12px
 }
 
-.nav-toggle {
+nav ul li a:hover {
+  background-color: var(--amarelo-color);
+}
+
+nav ul li ul {
   display: none;
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  color: white;
-  cursor: pointer
-}
-
-.menu-open {
-  display: flex !important;
-  flex-direction: column;
-  background: var(--aqua);
   position: absolute;
-  right: 10px;
-  top: 80px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, .3)
+  top: 100%;
+  left: 0;
+  background-color: var(--amareloo-color);
+  min-width: 180px;
+  z-index: 999;
+  flex-direction: column;
 }
 
-/* ==== Busca ==== */
-.search {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, .15);
-  padding: 6px;
-  border-radius: 999px
+nav ul li:hover > ul {
+  display: block;
 }
 
-.search input {
-  background: transparent;
+nav ul li ul li a {
+  padding: 12px 20px;
+  color: var(--branco-color);
+  text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+  background-color: var(--amarelo-color);
+}
+
+/* Estilo da barra de pesquisa */
+form {
+  position: relative;
+  top: 0px;
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+  overflow: hidden;
+}
+
+form input {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  font-size: 1em;
   border: none;
   outline: none;
-  color: white;
-  padding: 4px 8px;
-  min-width: 120px;
-  font-size: 1rem
+  padding: 0 20px;
+  display: none;
 }
 
 .search-btn {
-  background: none;
+  box-sizing: border-box;
+  padding: 0px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: var(--amarelo-color);
   border: none;
-  color: var(--amarelo);
   cursor: pointer;
-  font-size: 1.1rem
+  transition: all 1s;
+  font-size: 1.2em;
+}
+
+form:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+form:hover input {
+  display: block;
+}
+
+form:hover .search-btn {
+  background: var(--aqua-color);
+  color: var(--amarelo-color);
 }
 
 /* ==== VISOUND ==== */

@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="estilo.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>ViSound</title>
 </head>
-
 <body>
 
   <!-- ===== Botões de Acessibilidade ===== -->
@@ -28,48 +26,35 @@
   </div>
 
   <header>
-    <nav class="main-nav" role="navigation" aria-label="Navegação principal">
-      <div class="nav-inner">
-        <a href="#top" class="brand" aria-label="Página inicial ViSound">
-          <img src="img/logotipo tcc.png" alt="Logotipo ViSound" class="logo">
-        </a>
+    <nav>
+      <img src="img/logotipo tcc.png" alt="Logotipo ViSound" class="logo">
+      <ul>
+        <li><a href="#projeto">Projeto</a></li>
+        <li><a href="#deficiencias">Deficiências</a>
+          <ul>
+            <li><a href="#visual">Deficiência Visual</a></li>
+            <li><a href="#auditivo">Deficiência Auditiva</a></li>
+            <li><a href="#dalto">Daltonismo</a></li>
+          </ul>
+        </li>
+        <li><a href="#creditos">Créditos</a>
+          <ul>
+            <li><a href="#nicole">Nicole Pereira</a></li>
+            <li><a href="#sabrina">Sabrina Bela</a></li>
+            <li><a href="#sayuri">Stefanny Sayuri</a></li>
+            <li><a href="#thomas">Thomas Coradi</a></li>
+            <li><a href="#well">Welington Fernando</a></li>
+          </ul></li>
+        <li><a href="#extensao">Extensão</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
 
-        <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menu">
-          <i class="fas fa-bars"></i>
+      <form action="/pesquisa.html" method="GET">
+        <input type="search" name="q" placeholder="Pesquise aqui...">
+        <button type="submit" class="search-btn">
+          <i class="fas fa-search"></i>
         </button>
-
-        <ul id="main-menu" class="menu">
-          <li><button class="submenu-btn">Projeto</button></li>
-          <li class="has-sub">
-            <button class="submenu-btn">Deficiências</button>
-            <ul class="submenu">
-              <li><a href="#visual">Deficiência Visual</a></li>
-              <li><a href="#auditivo">Deficiência Auditiva</a></li>
-              <li><a href="#dalto">Daltonismo</a></li>
-            </ul>
-          </li>
-          <li class="has-sub">
-            <button class="submenu-btn">Créditos</button>
-            <ul class="submenu">
-              <li><a href="#nicole">Nicole Pereira</a></li>
-              <li><a href="#sabrina">Sabrina Bela</a></li>
-              <li><a href="#sayuri">Stefanny Sayuri</a></li>
-              <li><a href="#thomas">Thomas Coradi</a></li>
-              <li><a href="#well">Welington Fernando</a></li>
-            </ul>
-          </li>
-          <li><button class="submenu-btn" onclick="location.href='#extensao'">Extensão</button></li>
-          <li><button class="submenu-btn" onclick="location.href='#contato'">Contato</button></li>
-        </ul>
-
-        <form class="search" action="/pesquisa.html" method="GET" role="search" aria-label="Pesquisar no site">
-          <label for="q" class="visually-hidden">Pesquisar</label>
-          <input id="q" name="q" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
-          <button type="submit" class="search-btn" aria-label="Buscar">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-      </div>
+      </form>
     </nav>
   </header>
 
@@ -83,13 +68,7 @@
         <div class="visound-texto">
           <h1>ViSound</h1>
           <h3>O que é o ViSound?</h3>
-          <p>É uma extensão do Google Chrome que tem a finalidade de disponibilizar recursos e ajuda para uma navegação
-            na internet mais acessível e fácil para aqueles que têm dificuldade ou deficiência visual e/ou auditiva. Ela
-            pode mexer no alto contraste e diminuir/aumentar a fonte da letra e mudar a paleta de cores de uma aba para
-            os diferentes tipos de daltonismo — como protanopia, deuteranopia, tritanopia — para ajudar pessoas que
-            sofrem de deficiência visual. Também adiciona uma função de traduzir trechos marcados pelo usuário para
-            Libras por meio de uma janelinha com um avatar que fala em linguagem de sinais, para auxiliar os que possuem
-            deficiência auditiva.</p>
+          <p>É uma extensão do Google Chrome que tem a finalidade de disponibilizar recursos e ajuda para uma navegação na internet mais acessível e fácil para aqueles que têm dificuldade ou deficiência visual e/ou auditiva. Ela pode mexer no alto contraste e diminuir/aumentar a fonte da letra e mudar a paleta de cores de uma aba para os diferentes tipos de daltonismo — como protanopia, deuteranopia, tritanopia — para ajudar pessoas que sofrem de deficiência visual. Também adiciona uma função de traduzir trechos marcados pelo usuário para Libras por meio de uma janelinha com um avatar que fala em linguagem de sinais, para auxiliar os que possuem deficiência auditiva.</p>
         </div>
       </div>
     </section>
@@ -222,5 +201,4 @@
     });
   </script>
 </body>
-
 </html>
