@@ -1,69 +1,66 @@
 /* Reset básico */
 * {
-  padding: 0;
   margin: 0;
-  border: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 /* Paleta de cores */
 :root {
-  --preto-color: #000000;
-  --cinza-color: #4D555B;
-  --marinho-color: #012538;
-  --aqua-color: #1B768E;
-  --amarelo-color: #FB9833;
-  --amareloo-color: #A57A0F;
-  --branco-color: #FCEFEF;
+  --marinho: #012538;
+  --aqua: #1B768E;
+  --amarelo: #FB9833;
+  --amareloo: #A57A0F;
+  --branco: #FCEFEF;
 }
 
+/* Body */
 body {
-  background-color: var(--marinho-color);
-  color: var(--branco-color);
-  padding-top: 160px;
   font-family: Arial, sans-serif;
-  justify-content: center;
+  background: var(--marinho);
+  color: var(--branco);
+  padding-top: 160px;
   font-size: 1.1rem;
-  margin: 0;
 }
 
-h1,
-h2,
-h3 {
-  margin: 0 0 .5rem
+/* Cabeçalhos */
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
 }
 
 p {
-  margin: 0 0 1rem;
-  font-size: 1.1rem;
-  color: #e9eef3
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #e9eef3;
 }
 
-.container{
+/* Containers */
+.container {
   width: min(95%, 1200px);
   margin: auto;
   padding: 20px 0;
 }
 
+/* Logo */
 .logo {
   height: 200px;
 }
 
+/* NAV */
 nav {
-  background-color: var(--aqua-color);
-  color: var(--branco-color);
-  width: 100%;
-  height: 150px;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 150px;
+  background: var(--aqua);
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   z-index: 1000;
 }
 
@@ -79,12 +76,12 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 15px 20px;
-  color: var(--branco-color);
+  color: var(--branco);
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: var(--amarelo-color);
+  background: var(--amarelo);
 }
 
 nav ul li ul {
@@ -92,9 +89,8 @@ nav ul li ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--amareloo-color);
+  background: var(--amareloo);
   min-width: 180px;
-  z-index: 999;
   flex-direction: column;
 }
 
@@ -104,57 +100,64 @@ nav ul li:hover > ul {
 
 nav ul li ul li a {
   padding: 12px 20px;
-  color: var(--branco-color);
-  text-decoration: none;
 }
 
 nav ul li ul li a:hover {
-  background-color: var(--amarelo-color);
+  background: var(--amarelo);
 }
 
+/* Conteúdo cards */
 .conteudo {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center
+  justify-content: center;
 }
 
-.card{
-  width: 300px;
-  border: 1px solid #ddd;
+/* Card */
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fff;
+  color: #222;
+  width: 100%;
+  max-width: 600px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-   padding: 16px;
-      background-color: #fff;
-      font-family: Arial, sans-serif;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 6px;
-    }
-
-    .card h2 {
-      margin-top: 12px;
-      margin-bottom: 8px;
-      font-size: 1.5em;
-      color: #333;
-    }
-
-    .card p {
-      color: #666;
-      font-size: 1em;
-      line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  transition: transform 0.2s;
 }
 
-/* === NOVO — layout imagem + texto === */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
 
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card div {
+  flex: 1;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* VISOUND */
 .visound-container {
   display: flex;
   align-items: center;
@@ -164,46 +167,49 @@ nav ul li ul li a:hover {
 }
 
 .visound-img {
-  width: 280px;
+  width: 300px;
   border-radius: 10px;
-  box-shadow: 0 4px 16 px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
 
 .visound-texto {
   flex: 1 1 380px;
   max-width: 600px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
+/* Footer */
 footer {
-  border-top: 1px solid rgba(255, 255, 255, .1);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding: 20px 0;
-  text-align: center
+  text-align: center;
 }
 
-/* ==== Acessibilidade ===== */
+/* Acessibilidade */
 .acessibilidade {
   display: flex;
   gap: 8px;
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 1000;
+  z-index: 1500;
 }
 
-.acessibilidade button {
+.acessibilidade a {
+  display: inline-block;
+  text-decoration: none;
   background: var(--aqua);
   color: var(--branco);
-  border: none;
   padding: 6px 10px;
   font-size: 0.9rem;
-  cursor: pointer;
   border-radius: 4px;
   transition: background 0.2s;
 }
 
-.acessibilidade button:hover {
+.acessibilidade a:hover {
   background: var(--amarelo);
-  color: var(--marinho);
+  color: var(--branco);
 }
 
 .daltonismo-dropdown {
@@ -222,18 +228,16 @@ footer {
   min-width: 140px;
 }
 
-.daltonismo-menu button {
-  background: none;
-  border: none;
-  color: var(--branco);
+.daltonismo-menu a {
+  display: block;
   padding: 6px 12px;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
+  color: var(--branco);
+  text-decoration: none;
+  background-color: var(--amareloo);
 }
 
-.daltonismo-menu button:hover {
-  background: rgba(0, 0, 0, .15);
+.daltonismo-menu a:hover {
+  background: rgba(0,0,0,0.15);
 }
 
 .daltonismo-dropdown.open .daltonismo-menu {
@@ -250,27 +254,29 @@ body.alto-contraste a {
   color: #ff0 !important;
 }
 
-/* ==== MOBILE ==== */
-@media(max-width:768px) {
-  .menu {
-    display: none
-  }
-
-  .nav-toggle {
-    display: block
+/* MOBILE */
+@media(max-width:768px){
+  nav ul {
+    flex-direction: column;
   }
 
   .visound-container {
+    flex-direction: column;
     text-align: center;
-    flex-direction: column
   }
 
   .visound-img {
-    width: 200px
+    width: 200px;
   }
 
   .card {
-    width: 100%;
-    max-width: 360px
+    flex-direction: column;
+    text-align: center;
+    max-width: 360px;
+  }
+
+  .card img {
+    width: 200px;
+    height: 200px;
   }
 }
